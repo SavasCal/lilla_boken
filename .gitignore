@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+storage/
+!.env.example
+operations/
+
+# Riktig bokföringsdata (kontoutdrag, skattekonto, utlägg)
+bokforing/
+
+# BAS-kontoplanen får inte spridas, hämtas från bas.se vid yarn db:setup
+db/bas2026.json
+
+# Lokala instruktioner för AI-assistenter
+CLAUDE.md

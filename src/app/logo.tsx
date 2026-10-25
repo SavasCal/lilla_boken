@@ -1,0 +1,11 @@
+/** Liten uppslagen bok. Samma form som src/app/icon.svg (favicon). */
+export function Logo({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="7" fill="#1c1917" />
+      <path d="M7 8.5c3-1.4 6-1.4 9 .5v14c-3-1.9-6-1.9-9-.5z" fill="#fafaf9" />
+      <path d="M25 8.5c-3-1.4-6-1.4-9 .5v14c3-1.9 6-1.9 9-.5z" fill="#d6d3d1" />
+      <path d="M16 9v14" stroke="#1c1917" strokeWidth="1.2" />
+    </svg>
+  );
+}

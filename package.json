@@ -1,27 +1,35 @@
 {
   "name": "lilla_boken",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:start": "brew services start postgresql@17",
+    "db:setup": "PATH=/usr/local/opt/postgresql@17/bin:$PATH node --env-file=.env.local --no-warnings scripts/db-setup.ts",
+    "bas:import": "node --no-warnings scripts/import-bas.ts",
+    "check": "node --env-file=.env.local --no-warnings --experimental-transform-types --test scripts/check.ts"
   },
   "dependencies": {
     "next": "16.4.2",
+    "pg": "^8.23.1",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   },
   "packageManager": "yarn@1.22.22"
 }
